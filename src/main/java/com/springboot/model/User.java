@@ -1,9 +1,9 @@
-package model;
+package com.springboot.model;
 
+import jakarta.persistence.*;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.*;
 
 @Entity
 @Table(name = "users")
@@ -16,10 +16,10 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "firstName")
+    @Column(name = "first_name")
     private String firstName;
 
-    @Column(name = "lastName")
+    @Column(name = "last_name")
     private String lastName;
 
     @Column(name = "email")

@@ -1,12 +1,11 @@
-package dao;
+package com.springboot.dao;
 
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
-import web.model.User;
-
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+import com.springboot.model.User;
 import java.util.List;
 
 @Repository

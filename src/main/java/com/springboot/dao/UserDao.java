@@ -1,6 +1,6 @@
-package dao;
+package com.springboot.dao;
 
-import web.model.User;
+import com.springboot.model.User;
 
 import java.util.List;
 

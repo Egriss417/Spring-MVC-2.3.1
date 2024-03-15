@@ -1,4 +1,4 @@
-package controller;
+package com.springboot.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -7,8 +7,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import web.model.User;
-import web.service.UserService;
+import com.springboot.model.User;
+import com.springboot.service.UserService;
 
 @Controller
 public class UserController {
