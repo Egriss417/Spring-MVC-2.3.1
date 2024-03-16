@@ -4,7 +4,7 @@
 <title>Update user</title>
 </head>
 <body>
-<form action="#" th:action="@{/user-update}" th:object="${user}" method="post">
+<form action="#" th:action="@{/user-update}" th:object="${user}" method="PUT">
   <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
   <label for="id">ID</label>
   <br/>

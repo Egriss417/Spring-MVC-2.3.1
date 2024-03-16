@@ -1,14 +1,16 @@
 package com.springboot.controller;
 
+import org.hibernate.mapping.Map;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import com.springboot.model.User;
 import com.springboot.service.UserService;
+
+import java.util.HashMap;
 
 @Controller
 public class UserController {
@@ -37,7 +39,7 @@ public class UserController {
         return "redirect:/users";
     }
 
-    @GetMapping("/user-delete/{id}")
+    @DeleteMapping ("/user-delete/{id}")
     public String removeUser(@PathVariable("id") Long id) {
         userService.removeUser(id);
         return "redirect:/users";
@@ -49,7 +51,7 @@ public class UserController {
         model.addAttribute("user", user);
         return "/user-update";
     }
-    @PostMapping("/user-update")
+    @PutMapping("/user-update")
     public String updateUser(User user){
         userService.updateUser(user);
         return "redirect:/users";
