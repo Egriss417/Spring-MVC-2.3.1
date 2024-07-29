@@ -42,7 +42,7 @@ public class WebConfig implements WebMvcConfigurer {
         return templateEngine;
     }
 
-
+//замена шаблонизатора на таймлив
     @Override
     public void configureViewResolvers(ViewResolverRegistry registry) {
         ThymeleafViewResolver resolver = new ThymeleafViewResolver();
